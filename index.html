@@ -59,6 +59,13 @@ h2{font-size:1.3rem;margin-bottom:4px}
 .copybtn{width:100%;background:var(--acc);border:0;color:#101114;font-weight:800;border-radius:12px;padding:14px;font-size:.93rem;cursor:pointer}
 .copybtn:active{transform:scale(.98)}
 footer{padding:30px 0 56px;text-align:center;color:var(--mut);font-size:.76rem}
+/* key dates strip */
+.dates{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin-top:14px;scrollbar-width:none}
+.dates::-webkit-scrollbar{display:none}
+.date-chip{flex:0 0 auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px;text-align:center}
+.date-chip b{display:block;color:var(--acc);font-size:.82rem;white-space:nowrap}
+.date-chip span{font-size:.7rem;color:var(--mut);white-space:nowrap}
+.p-date{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);background:rgba(255,107,26,.12);border:1px solid rgba(255,107,26,.35);border-radius:999px;padding:3px 10px;margin-bottom:6px}
 </style>
 </head>
 <body>
@@ -68,6 +75,13 @@ footer{padding:30px 0 56px;text-align:center;color:var(--mut);font-size:.76rem}
   <div class="kicker">Internship Campaign</div>
   <h1>MALIA <span class="o">→</span> ANDURIL</h1>
   <p>Do the list below first. Everything else can wait.</p>
+  <div class="dates">
+    <div class="date-chip"><b>Oct 8</b><span>Virtual fair · 1–4pm</span></div>
+    <div class="date-chip"><b>Oct 11</b><span>Apply-by target</span></div>
+    <div class="date-chip"><b>Oct 28</b><span>Engineering fair</span></div>
+    <div class="date-chip"><b>Feb 24–26</b><span>Spring fair</span></div>
+    <div class="date-chip"><b>2029</b><span>Arsenal-2 hiring</span></div>
+  </div>
 </header>
 
 <section>
@@ -88,17 +102,17 @@ footer{padding:30px 0 56px;text-align:center;color:var(--mut);font-size:.76rem}
           <p>SolidWorks (free via UMD), Python/MATLAB. Check out drone teams + AIAA.</p>
         </div>
         <div class="tl-item">
-          <div class="tl-when">Spring 2027</div>
+          <div class="tl-when">Feb – May 2027</div>
           <h3>Level up</h3>
           <p>Spring career fair (Feb 24–26). Join a faculty research lab. Portfolio page with project photos. UMD alumni at Anduril — informational chats. Write the "why defense tech" story.</p>
         </div>
         <div class="tl-item">
-          <div class="tl-when">Summer 2027</div>
+          <div class="tl-when">May – Aug 2027</div>
           <h3>First internship</h3>
           <p>APL, Rocket Lab, or Anduril. Real hardware experience — this unlocks 2028.</p>
         </div>
         <div class="tl-item">
-          <div class="tl-when">Fall 2027</div>
+          <div class="tl-when">Aug – Sep 2027</div>
           <h3>Apply the week postings drop</h3>
           <p>Anduril Summer 2028 reqs post ~Aug–Sep. Rolling review fills seats by winter break.</p>
         </div>
@@ -145,27 +159,28 @@ Start each check-in by telling me: what I finished since last time, what's most 
 
 <script>
 const NOW = [
-  ["n1","Apply: Anduril Mechanical Engineer Intern","Summer 2027 · Reston, VA — pick Reston as top location.","https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007","Apply"],
-  ["n2","Apply: Anduril Flight Software Engineer Intern","Summer 2027 · aerospace majors eligible.","https://boards.greenhouse.io/andurilindustries/jobs/5239083007","Apply"],
-  ["n3","Apply: Anduril Manufacturing Optimization Intern","Summer 2027 · composite aerostructures.","https://boards.greenhouse.io/andurilindustries/jobs/5236893007","Apply"],
-  ["n4","Apply: Johns Hopkins APL Internship","Summer 2027 · Laurel, MD. No class-year minimum, 3.0 GPA, US citizen. Best freshman odds.","https://www.jhuapl.edu/careers/internships","Apply"],
-  ["n5","Apply: Rocket Lab Test Engineering Intern","Summer 2027 · Middle River / Silver Spring, MD.","https://job-boards.greenhouse.io/rocketlab/jobs/8003529003","Apply"],
-  ["n6","Join Anduril's Talent Community","Gets you on a recruiter's radar.","https://www.anduril.com/early-careers","Join"],
-  ["n7","Resume on Handshake + register for Oct 8 fair","Virtual Fall Career & Internship Fair, Oct 8, 1–4pm. UMD fairs pull from Handshake.","https://eng.umd.edu/careers/students/fairs","Fair info"],
-  ["n8","Go to the Oct 28 Engineering Fair","Multi-Industry Engineering Fair, 2–6pm, Kim Engineering Rotunda. The aerospace one — prep talking points with your AI.","https://eng.umd.edu/careers/students/fairs","Fair info"],
-  ["n9","Join Terrapin Rockets","Genesis Cup winners. Defense recruiters visit the team directly — this is the credential Anduril asks for.","https://sites.google.com/terpmail.umd.edu/terprockets/home","Join"],
-  ["n10","Check your UMD class standing","40 AP credits may count as sophomore — changes which postings you qualify for.",null,null],
+  ["n1","Apply: Anduril Mechanical Engineer Intern","Rolling — no deadline, seats fill as they go","Summer 2027 · Reston, VA — pick Reston as top location.","https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007","Apply"],
+  ["n2","Apply: Anduril Flight Software Engineer Intern","Rolling — no deadline","Summer 2027 · aerospace majors eligible.","https://boards.greenhouse.io/andurilindustries/jobs/5239083007","Apply"],
+  ["n3","Apply: Anduril Manufacturing Optimization Intern","Rolling — no deadline","Summer 2027 · composite aerostructures.","https://boards.greenhouse.io/andurilindustries/jobs/5236893007","Apply"],
+  ["n4","Apply: Johns Hopkins APL Internship","Rolling — no deadline","Summer 2027 · Laurel, MD. No class-year minimum, 3.0 GPA, US citizen. Best freshman odds.","https://www.jhuapl.edu/careers/internships","Apply"],
+  ["n5","Apply: Rocket Lab Test Engineering Intern","Rolling — no deadline","Summer 2027 · Middle River / Silver Spring, MD.","https://job-boards.greenhouse.io/rocketlab/jobs/8003529003","Apply"],
+  ["n6","Join Anduril's Talent Community","This week","Gets you on a recruiter's radar.","https://www.anduril.com/early-careers","Join"],
+  ["n7","Resume on Handshake + register for Oct 8 fair","Oct 8 · 1–4pm","Virtual Fall Career & Internship Fair. UMD fairs pull from Handshake.","https://eng.umd.edu/careers/students/fairs","Fair info"],
+  ["n8","Go to the Oct 28 Engineering Fair","Oct 28 · 2–6pm","Multi-Industry Engineering Fair, Kim Engineering Rotunda. The aerospace one — prep talking points with your AI.","https://eng.umd.edu/careers/students/fairs","Fair info"],
+  ["n9","Join Terrapin Rockets","October","Genesis Cup winners. Defense recruiters visit the team directly — this is the credential Anduril asks for.","https://sites.google.com/terpmail.umd.edu/terprockets/home","Join"],
+  ["n10","Check your UMD class standing","This week","40 AP credits may count as sophomore — changes which postings you qualify for.",null,null],
 ];
 const KEY = "malia-now-v2";
 let done = {};
 try { done = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e) {}
 const host = document.getElementById("now");
-NOW.forEach(([id,title,desc,url,label],i) => {
+NOW.forEach(([id,title,date,desc,url,label],i) => {
   const el = document.createElement("div");
   el.className = "pri" + (done[id] ? " done" : "");
   el.innerHTML = `<div class="num">${done[id] ? "✓" : (i+1)}</div>
-    <div class="p-body"><div class="p-title"></div><div class="p-desc"></div>${url ? `<a class="p-link" href="${url}">${label} →</a>` : ""}</div>
+    <div class="p-body"><div class="p-date"></div><div class="p-title"></div><div class="p-desc"></div>${url ? `<a class="p-link" href="${url}">${label} →</a>` : ""}</div>
     <div class="p-check">${done[id] ? "✓" : ""}</div>`;
+  el.querySelector(".p-date").textContent = "📅 " + date;
   el.querySelector(".p-title").textContent = title;
   el.querySelector(".p-desc").textContent = desc;
   el.querySelector(".p-check").onclick = (e) => {
