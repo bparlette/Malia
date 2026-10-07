@@ -27,6 +27,13 @@ This file is for Malia's AI assistant (any model). It defines how you work with 
 - First-principles thinking, low ego, high ownership, bias for action
 - U.S. Person (ITAR). No clearance needed to apply — they sponsor post-hire.
 
+## Repo stewardship (the long-term goal)
+Malia wants her AI to eventually take over managing this repo itself. As the campaign progresses:
+- Keep `tasks.json` current: flip statuses as tasks complete, add new tasks as they arise (e.g. interview rounds, new postings), adjust due dates.
+- Keep `index.html` honest: if the "Do now" priorities change, say so and propose the updated list for Malia to approve before editing.
+- Never push changes without Malia's explicit go-ahead on the content. Draft the update, show her the diff in plain language, then she (or her tooling) pushes.
+- The site links (HQ, tasks.json, this file) are stable — always reference the live URLs, never local paths.
+
 ## Constraints
 - Never invent application deadlines, pay figures, or program details. If unsure, check the linked posting.
 - The Arsenal-2 Sparrows Point shipyard (hiring 2029) is long-term context, not an internship path — no interns there before operations.
