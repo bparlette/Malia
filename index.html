@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malia's Anduril Campaign</title>
+<meta name="description" content="Malia's internship campaign: UMD Aerospace Engineering → Anduril. Checklist, timeline, links, and AI collaboration hub.">
+<style>
+:root{
+  --bg:#0c0d10; --bg2:#14161b; --card:#181b21; --line:#262b34;
+  --txt:#f2f4f7; --mut:#a7b0bd; --acc:#ff6b1a; --acc2:#ffa25e;
+  --lime:#b8e62e; --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+a{color:var(--acc2)}
+/* hero */
+.hero{padding:52px 0 30px;text-align:center;background:radial-gradient(120% 90% at 50% 0%,#1c2027 0%,var(--bg) 70%)}
+.kicker{font-size:.72rem;letter-spacing:.28em;color:var(--acc);font-weight:700;text-transform:uppercase}
+.hero h1{font-size:2.1rem;line-height:1.12;margin:12px 0 10px;letter-spacing:-.01em}
+.hero h1 .o{color:var(--acc)}
+.hero p{color:var(--mut);font-size:.98rem;max-width:34ch;margin:0 auto}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.badge{font-size:.75rem;font-weight:600;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--txt)}
+.badge b{color:var(--lime)}
+/* progress */
+.progress{position:sticky;top:0;z-index:50;background:rgba(12,13,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0}
+.progress .wrap{display:flex;align-items:center;gap:10px}
+.bar{flex:1;height:8px;background:var(--bg2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));border-radius:99px;transition:width .3s}
+.pct{font-size:.8rem;font-weight:700;color:var(--mut);min-width:44px;text-align:right}
+/* sections */
+section{padding:30px 0}
+.sec-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+.sec-head h2{font-size:1.25rem;letter-spacing:.02em}
+.sec-head .tag{font-size:.68rem;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+.sub{color:var(--mut);font-size:.9rem;margin-bottom:16px}
+/* urgent cards */
+.urgent{background:linear-gradient(180deg,#1a1410,#14161b);border:1px solid #3a2a18;border-radius:var(--r);padding:16px;margin-bottom:12px}
+.urgent .when{font-size:.7rem;font-weight:800;letter-spacing:.16em;color:var(--acc);text-transform:uppercase;margin-bottom:6px}
+.urgent h3{font-size:1.02rem;margin-bottom:4px}
+.urgent p{color:var(--mut);font-size:.88rem;margin-bottom:10px}
+.btn{display:inline-block;background:var(--acc);color:#101114;font-weight:800;text-decoration:none;border-radius:12px;padding:12px 18px;font-size:.92rem;margin:4px 6px 4px 0}
+.btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.btn:active{transform:scale(.97)}
+/* checklist */
+.task{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:10px;cursor:pointer;align-items:flex-start}
+.task.done{opacity:.55}
+.task.done .t-title{text-decoration:line-through}
+.box{flex:0 0 24px;height:24px;border:2px solid var(--mut);border-radius:8px;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--lime);transition:all .15s}
+.task.done .box{border-color:var(--lime);background:rgba(184,230,46,.12)}
+.t-title{font-weight:700;font-size:.95rem}
+.t-desc{color:var(--mut);font-size:.84rem;margin-top:2px}
+.t-desc a{color:var(--acc2)}
+.group-label{font-size:.72rem;font-weight:800;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;margin:22px 0 10px}
+/* timeline */
+.tl{position:relative;padding-left:26px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 22px}
+.tl-item:before{content:"";position:absolute;left:-24px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--acc)}
+.tl-item.now:before{background:var(--acc);box-shadow:0 0 0 4px rgba(255,107,26,.2)}
+.tl-when{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+.tl-item h3{font-size:1rem;margin:2px 0 4px}
+.tl-item p{color:var(--mut);font-size:.87rem}
+/* links */
+.linkcard{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;text-decoration:none;color:var(--txt)}
+.linkcard b{display:block;font-size:.95rem}
+.linkcard span{color:var(--mut);font-size:.82rem}
+.linkcard:after{content:"↗";float:right;color:var(--acc);font-weight:800;margin-top:-22px}
+/* ai section */
+.ai{background:linear-gradient(180deg,#101820,#0c0d10);border:1px solid #1d3a4a;border-radius:20px;padding:22px 18px;margin-top:8px}
+.ai h2{font-size:1.2rem;margin-bottom:6px}
+.ai h2 .robo{color:var(--acc)}
+.ai p{color:var(--mut);font-size:.89rem;margin-bottom:12px}
+.promptbox{background:#0a0c0f;border:1px dashed #2c3e50;border-radius:12px;padding:14px;font-size:.82rem;color:#c9d6e3;white-space:pre-wrap;max-height:280px;overflow:auto;margin-bottom:12px}
+.copybtn{width:100%;background:var(--acc);border:0;color:#101114;font-weight:800;border-radius:12px;padding:14px;font-size:.95rem;cursor:pointer}
+.copybtn:active{transform:scale(.98)}
+.steps{margin:14px 0 0;padding-left:20px;color:var(--mut);font-size:.87rem}
+.steps li{margin-bottom:8px}
+.steps b{color:var(--txt)}
+footer{padding:34px 0 60px;text-align:center;color:var(--mut);font-size:.78rem}
+footer a{color:var(--acc2)}
+@media(min-width:700px){.hero h1{font-size:2.7rem}}
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="wrap">
+  <div class="bar"><i id="barfill"></i></div>
+  <div class="pct" id="pct">0%</div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Internship Campaign</div>
+  <h1>MALIA <span class="o">→</span> ANDURIL</h1>
+  <p>UMD Aerospace Engineering → defense tech. The plan, the checklist, and the links — built for Malia and her AI to run together.</p>
+  <div class="badges">
+    <span class="badge">UMD Honors <b>Aerospace</b></span>
+    <span class="badge"><b>40</b> AP credits</span>
+    <span class="badge">Target: <b>Summer 2028</b></span>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<section id="this-week">
+  <div class="sec-head"><span class="tag">Do now</span><h2>This week</h2></div>
+  <p class="sub">Applications are rolling — seats fill as they go. Every day waiting costs odds.</p>
+
+  <div class="urgent">
+    <div class="when">Apply · Summer 2027</div>
+    <h3>Anduril — Mechanical Engineer Intern</h3>
+    <p>Reston, VA. Pick Reston as top location.</p>
+    <a class="btn" href="https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007">Apply</a>
+  </div>
+  <div class="urgent">
+    <div class="when">Apply · Summer 2027</div>
+    <h3>Anduril — Flight Software Engineer Intern</h3>
+    <p>Aerospace majors eligible.</p>
+    <a class="btn" href="https://boards.greenhouse.io/andurilindustries/jobs/5239083007">Apply</a>
+  </div>
+  <div class="urgent">
+    <div class="when">Apply · Summer 2027</div>
+    <h3>Anduril — Manufacturing Optimization Intern</h3>
+    <p>Composite aerostructures.</p>
+    <a class="btn" href="https://boards.greenhouse.io/andurilindustries/jobs/5236893007">Apply</a>
+  </div>
+  <div class="urgent">
+    <div class="when">Apply · Summer 2027</div>
+    <h3>Johns Hopkins APL Internship</h3>
+    <p>Laurel, MD — 20 min from campus. No class-year minimum, 3.0 GPA, US citizen. Best freshman odds.</p>
+    <a class="btn" href="https://www.jhuapl.edu/careers/internships">Apply</a>
+  </div>
+  <div class="urgent">
+    <div class="when">Apply · Summer 2027</div>
+    <h3>Rocket Lab — Test Engineering Intern</h3>
+    <p>Middle River / Silver Spring, MD. Neutron rocket stages.</p>
+    <a class="btn" href="https://job-boards.greenhouse.io/rocketlab/jobs/8003529003">Apply</a>
+  </div>
+  <div class="urgent">
+    <div class="when">This week</div>
+    <h3>Talent Community + career fairs</h3>
+    <p>Join Anduril's Talent Community, put your resume on Handshake, register for the Oct 8 virtual fair, and check your official UMD class standing (40 AP credits may = sophomore).</p>
+    <a class="btn ghost" href="https://www.anduril.com/early-careers">Talent Community</a>
+    <a class="btn ghost" href="https://eng.umd.edu/careers/students/fairs">UMD career fairs</a>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="sec-head"><span class="tag">Schedule</span><h2>The plan</h2></div>
+  <p class="sub">Summer 2027 is the lottery ticket. Summer 2028 is the real target.</p>
+  <div class="tl">
+    <div class="tl-item now">
+      <div class="tl-when">Oct 2026</div>
+      <h3>Applications + career fairs</h3>
+      <p>Apply everywhere above. Oct 8 virtual fair, <b>Oct 28 Multi-Industry Engineering Fair</b> (2–6pm, Kim Engineering Rotunda) — the aerospace one.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">Fall 2026</div>
+      <h3>Build things</h3>
+      <p>Join <b>Terrapin Rockets</b> (Genesis Cup winners — defense recruiters visit the team). Check out the drone teams and AIAA. Start SolidWorks + Python.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">Spring 2027</div>
+      <h3>Level up</h3>
+      <p>Spring career fair (Feb 24–26). Get into a faculty research lab. Portfolio page with project photos. Find UMD alumni at Anduril for informational chats.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">Summer 2027</div>
+      <h3>First internship</h3>
+      <p>APL, Rocket Lab, or Anduril. Real hardware experience — this is what unlocks 2028.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">Fall 2027</div>
+      <h3>Apply the week postings drop</h3>
+      <p>Anduril Summer 2028 reqs post ~Aug–Sep. Apply in week one — rolling review fills seats by winter break.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">2029</div>
+      <h3>Graduate → Arsenal-2</h3>
+      <p>Anduril's $3.7B Arsenal-2 shipyard at Sparrows Point starts hiring 2029 — right as Malia graduates. Return offer or full-time, timed with the biggest defense build in Maryland in a decade.</p>
+    </div>
+  </div>
+</section>
+
+<section id="checklist">
+  <div class="sec-head"><span class="tag">Track it</span><h2>Checklist</h2></div>
+  <p class="sub">Tap to check off. Progress saves on this device.</p>
+  <div id="tasks"></div>
+</section>
+
+<section id="links">
+  <div class="sec-head"><span class="tag">Hub</span><h2>Key links</h2></div>
+  <p class="sub">Everything in one place.</p>
+  <div class="group-label">Apply</div>
+  <a class="linkcard" href="https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007"><b>Anduril · Mechanical Engineer Intern 2027</b><span>Reston, VA · Greenhouse</span></a>
+  <a class="linkcard" href="https://boards.greenhouse.io/andurilindustries/jobs/5239083007"><b>Anduril · Flight Software Engineer Intern 2027</b><span>Greenhouse</span></a>
+  <a class="linkcard" href="https://boards.greenhouse.io/andurilindustries/jobs/5236893007"><b>Anduril · Manufacturing Optimization Intern 2027</b><span>Greenhouse</span></a>
+  <a class="linkcard" href="https://www.anduril.com/open-roles?department=internships"><b>All Anduril internships</b><span>anduril.com</span></a>
+  <a class="linkcard" href="https://www.anduril.com/early-careers"><b>Anduril Talent Community</b><span>Get on a recruiter's radar</span></a>
+  <a class="linkcard" href="https://www.jhuapl.edu/careers/internships"><b>JHU APL internships</b><span>Laurel, MD</span></a>
+  <a class="linkcard" href="https://job-boards.greenhouse.io/rocketlab/jobs/8003529003"><b>Rocket Lab · Test Engineering Intern 2027</b><span>Middle River / Silver Spring, MD</span></a>
+  <div class="group-label">Join this fall</div>
+  <a class="linkcard" href="https://sites.google.com/terpmail.umd.edu/terprockets/home"><b>Terrapin Rockets</b><span>2024 Genesis Cup winners</span></a>
+  <a class="linkcard" href="https://robotics.umd.edu/opportunities/student-teams"><b>UMD drone &amp; robotics teams</b><span>robotics.umd.edu</span></a>
+  <a class="linkcard" href="https://aero.umd.edu/undergraduate/current-students/student-groups"><b>UMD aero student groups</b><span>Includes AIAA branch</span></a>
+  <div class="group-label">Career fairs &amp; research</div>
+  <a class="linkcard" href="https://eng.umd.edu/careers/students/fairs"><b>UMD engineering career fairs</b><span>Oct 8 virtual · Oct 28 in person · Feb 24–26 spring</span></a>
+  <a class="linkcard" href="https://www.extern.com/post/anduril-internship-guide"><b>Anduril internship guide</b><span>Timelines, pay, interview process</span></a>
+</section>
+
+<section id="ai">
+  <div class="ai">
+    <h2><span class="robo">🤖</span> For Malia's AI</h2>
+    <p>This page is built for human + AI collaboration. Malia: paste the starter prompt below into your Muse. It gives your AI the full campaign context — the plan above, the task list (<a href="tasks.json">tasks.json</a>), and how to work with you.</p>
+    <div class="promptbox" id="promptbox">I'm Malia, a first-year Aerospace Engineering student in the UMD Honors College. I transferred in 40 AP credits and I'm targeting an Anduril internship.
+
+My campaign headquarters is this page. The full plan, checklist, timeline, and links are here. The machine-readable task list is at tasks.json on this site.
+
+Act as my campaign coordinator:
+1. Read the plan and tasks.json so you know where I stand.
+2. Tell me the 3 most important things to do this week and why.
+3. Help me do them — draft my resume bullets, cover letters, LinkedIn outreach messages, and career-fair talking points.
+4. Track my progress: when I finish something, check it off with me and tell me what's next.
+5. Be direct and honest. If I'm behind, say so. If a task needs a decision from me, ask.
+
+My edge: Honors aerospace, 40 AP credits (check my class standing — it may count as sophomore), near-perfect SAT. My gap: I'm a freshman and Anduril favors project experience — so Terrapin Rockets + a summer 2027 internship (APL/Rocket Lab) are how I close it. Summer 2028 at Anduril is the real target.</div>
+    <button class="copybtn" id="copybtn">Copy starter prompt</button>
+    <ol class="steps">
+      <li><b>Malia</b> — paste the prompt into your Muse to onboard it.</li>
+      <li><b>Your AI</b> — read <a href="tasks.json">tasks.json</a> and <a href="AI-COLLAB.md">AI-COLLAB.md</a> in this repo for the collaboration protocol.</li>
+      <li><b>Together</b> — work the checklist top to bottom. Check things off here as you finish them.</li>
+    </ol>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<footer><div class="wrap">
+  Built for Malia's Anduril campaign · Oct 2026<br>
+  <a href="https://github.com/bparlette/Malia">github.com/bparlette/Malia</a>
+</div></footer>
+
+<script>
+const TASKS = [
+  ["apply", "Applications (do first — rolling review)", [
+    ["a1", "Apply: Anduril Mechanical Engineer Intern 2027", "Reston, VA — job-boards.greenhouse.io/andurilindustries/jobs/5153187007"],
+    ["a2", "Apply: Anduril Flight Software Engineer Intern 2027", "boards.greenhouse.io/andurilindustries/jobs/5239083007"],
+    ["a3", "Apply: Anduril Manufacturing Optimization Intern 2027", "boards.greenhouse.io/andurilindustries/jobs/5236893007"],
+    ["a4", "Apply: JHU APL internship 2027", "jhuapl.edu/careers/internships — best freshman odds"],
+    ["a5", "Apply: Rocket Lab Test Engineering Intern 2027", "Middle River / Silver Spring, MD"],
+    ["a6", "Join Anduril Talent Community", "anduril.com/early-careers — get on a recruiter's radar"],
+  ]],
+  ["fairs", "Career fairs", [
+    ["f1", "Resume on Handshake", "UMD fairs pull from Handshake"],
+    ["f2", "Oct 8: Virtual Fall Career & Internship Fair", "1–4pm, register on Handshake"],
+    ["f3", "Oct 28: Multi-Industry Engineering Fair", "2–6pm, Kim Engineering Rotunda — the aerospace one"],
+    ["f4", "Check official UMD class standing", "40 AP credits may count as sophomore — changes which postings fit"],
+  ]],
+  ["build", "Build (fall 2026)", [
+    ["b1", "Join Terrapin Rockets", "Genesis Cup winners — defense recruiters visit the team directly"],
+    ["b2", "Check out drone teams + AIAA", "robotics.umd.edu + aero.umd.edu student groups"],
+    ["b3", "Start SolidWorks (free via UMD)", "CAD is explicitly screened for"],
+    ["b4", "Start Python", "Plus MATLAB — Anduril technical screens use both"],
+  ]],
+  ["spring", "Spring 2027", [
+    ["s1", "Spring career fair (Feb 24–26)", "eng.umd.edu/careers/students/fairs"],
+    ["s2", "Get into a faculty research lab", "Lab experience is weighted heavily"],
+    ["s3", "Portfolio page with project photos", "Resume around what you built + numbers"],
+    ["s4", "UMD alumni at Anduril: informational chats", "Referrals ~2x interview odds"],
+    ["s5", "Write the mission narrative", "'Why defense tech' is an explicit interview filter"],
+  ]],
+  ["summer27", "Summer 2027", [
+    ["t1", "Land first internship", "APL / Rocket Lab / Anduril — real hardware experience"],
+  ]],
+  ["fall27", "Fall 2027", [
+    ["u1", "Apply Anduril Summer 2028 — week one", "Reqs post ~Aug–Sep; rolling fills by winter break"],
+  ]],
+];
+const KEY = "malia-anduril-tasks-v1";
+let done = {};
+try { done = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e) {}
+const host = document.getElementById("tasks");
+TASKS.forEach(([gid, label, items]) => {
+  const gl = document.createElement("div");
+  gl.className = "group-label"; gl.textContent = label;
+  host.appendChild(gl);
+  items.forEach(([id, title, desc]) => {
+    const el = document.createElement("div");
+    el.className = "task" + (done[id] ? " done" : "");
+    el.innerHTML = `<div class="box">${done[id] ? "✓" : ""}</div><div><div class="t-title"></div><div class="t-desc"></div></div>`;
+    el.querySelector(".t-title").textContent = title;
+    el.querySelector(".t-desc").textContent = desc;
+    el.onclick = () => {
+      done[id] = !done[id];
+      try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e) {}
+      el.classList.toggle("done", !!done[id]);
+      el.querySelector(".box").textContent = done[id] ? "✓" : "";
+      updateProgress();
+    };
+    host.appendChild(el);
+  });
+});
+function updateProgress(){
+  const total = TASKS.reduce((n,g)=>n+g[2].length,0);
+  const n = Object.values(done).filter(Boolean).length;
+  const p = Math.round(100*n/total);
+  document.getElementById("barfill").style.width = p+"%";
+  document.getElementById("pct").textContent = p+"%";
+}
+updateProgress();
+document.getElementById("copybtn").onclick = async () => {
+  const t = document.getElementById("promptbox").textContent;
+  try { await navigator.clipboard.writeText(t); }
+  catch(e){
+    const ta = document.createElement("textarea");
+    ta.value = t; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); ta.remove();
+  }
+  const b = document.getElementById("copybtn");
+  b.textContent = "Copied ✓"; setTimeout(()=>b.textContent="Copy starter prompt", 2000);
+};
+</script>
+</body>
+</html>
