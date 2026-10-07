@@ -76,11 +76,12 @@ footer{padding:30px 0 56px;text-align:center;color:var(--mut);font-size:.76rem}
   <h1>MALIA <span class="o">→</span> ANDURIL</h1>
   <p>Do the list below first. Everything else can wait.</p>
   <div class="dates">
-    <div class="date-chip"><b>Oct 8</b><span>Virtual fair · 1–4pm</span></div>
-    <div class="date-chip"><b>Oct 11</b><span>Apply-by target</span></div>
-    <div class="date-chip"><b>Oct 28</b><span>Engineering fair</span></div>
-    <div class="date-chip"><b>Feb 24–26</b><span>Spring fair</span></div>
-    <div class="date-chip"><b>2029</b><span>Arsenal-2 hiring</span></div>
+    <div class="date-chip" data-goto="task-n7"><b>Oct 8</b><span>Virtual fair · 1–4pm</span></div>
+    <div class="date-chip" data-goto="task-n1"><b>Oct 11</b><span>Apply-by target</span></div>
+    <div class="date-chip" data-goto="task-n8b"><b>Oct 19</b><span>Thales info session</span></div>
+    <div class="date-chip" data-goto="task-n8"><b>Oct 28</b><span>Engineering fair</span></div>
+    <div class="date-chip" data-goto="later"><b>Feb 24–26</b><span>Spring fair</span></div>
+    <div class="date-chip" data-goto="later"><b>2029</b><span>Arsenal-2 hiring</span></div>
   </div>
 </header>
 
@@ -177,6 +178,8 @@ const host = document.getElementById("now");
 NOW.forEach(([id,title,date,desc,url,label],i) => {
   const el = document.createElement("div");
   el.className = "pri" + (done[id] ? " done" : "");
+  el.id = "task-" + id;
+  el.style.scrollMarginTop = "14px";
   el.innerHTML = `<div class="num">${done[id] ? "✓" : (i+1)}</div>
     <div class="p-body"><div class="p-date"></div><div class="p-title"></div><div class="p-desc"></div>${url ? `<a class="p-link" href="${url}">${label} →</a>` : ""}</div>
     <div class="p-check">${done[id] ? "✓" : ""}</div>`;
@@ -197,6 +200,15 @@ NOW.forEach(([id,title,date,desc,url,label],i) => {
 });
 document.getElementById("laterHead").onclick = () =>
   document.getElementById("later").classList.toggle("open");
+document.querySelectorAll(".date-chip").forEach(ch => {
+  ch.style.cursor = "pointer";
+  ch.onclick = () => {
+    const t = ch.dataset.goto;
+    if (t === "later") document.getElementById("later").classList.add("open");
+    const elm = document.getElementById(t === "later" ? "later" : t);
+    if (elm) setTimeout(() => elm.scrollIntoView({behavior:"smooth", block:"start"}), 60);
+  };
+});
 document.getElementById("copybtn").onclick = async () => {
   const t = document.getElementById("promptbox").textContent;
   try { await navigator.clipboard.writeText(t); }
