@@ -1,1 +1,241 @@
-{"campaign":"Malia → Anduril internship","groups":[{"id":"apply","label":"Applications (do first — rolling review)","tasks":[{"detail":"Reston, VA","due":"2026-10-11","id":"a1","status":"todo","title":"Apply: Anduril Mechanical Engineer Intern 2027","url":"https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007"},{"detail":"Aerospace majors eligible","due":"2026-10-11","id":"a2","status":"todo","title":"Apply: Anduril Flight Software Engineer Intern 2027","url":"https://boards.greenhouse.io/andurilindustries/jobs/5239083007"},{"detail":"Composite aerostructures","due":"2026-10-11","id":"a3","status":"todo","title":"Apply: Anduril Manufacturing Optimization Intern 2027","url":"https://boards.greenhouse.io/andurilindustries/jobs/5236893007"},{"detail":"Laurel MD. No class-year minimum, 3.0 GPA, US citizen. Best freshman odds.","due":"2026-10-18","id":"a4","status":"todo","title":"Apply: JHU APL internship 2027","url":"https://www.jhuapl.edu/careers/internships"},{"detail":"Middle River / Silver Spring MD","due":"2026-10-18","id":"a5","status":"todo","title":"Apply: Rocket Lab Test Engineering Intern 2027","url":"https://job-boards.greenhouse.io/rocketlab/jobs/8003529003"},{"detail":"Get on a recruiter's radar","due":"2026-10-11","id":"a6","status":"todo","title":"Join Anduril Talent Community","url":"https://www.anduril.com/early-careers"}]},{"id":"fairs","label":"Career fairs","tasks":[{"detail":"UMD fairs pull from Handshake","due":"2026-10-07","id":"f1","status":"todo","title":"Resume on Handshake","url":null},{"detail":"1–4pm, register on Handshake","due":"2026-10-08","id":"f2","status":"todo","title":"Oct 8: Virtual Fall Career & Internship Fair","url":"https://eng.umd.edu/careers/students/fairs"},{"detail":"2–6pm, Kim Engineering Rotunda — the aerospace one","due":"2026-10-28","id":"f3","status":"todo","title":"Oct 28: Multi-Industry Engineering Fair","url":"https://eng.umd.edu/careers/students/fairs"},{"detail":"40 AP credits may count as sophomore — changes which postings fit","due":"2026-10-14","id":"f4","status":"todo","title":"Check official UMD class standing","url":null}]},{"id":"build","label":"Build (fall 2026)","tasks":[{"detail":"Genesis Cup winners — defense recruiters visit the team directly","due":"2026-10-31","id":"b1","status":"todo","title":"Join Terrapin Rockets","url":"https://sites.google.com/terpmail.umd.edu/terprockets/home"},{"detail":"Directly relevant to Anduril's Ghost/Anvil drones","due":"2026-10-31","id":"b2","status":"todo","title":"Check out drone teams + AIAA","url":"https://robotics.umd.edu/opportunities/student-teams"},{"detail":"CAD is explicitly screened for in Anduril postings","due":"2026-12-01","id":"b3","status":"todo","title":"Start SolidWorks (free via UMD)","url":null},{"detail":"Plus MATLAB — Anduril technical screens use both","due":"2026-12-01","id":"b4","status":"todo","title":"Start Python","url":null}]},{"id":"spring","label":"Spring 2027","tasks":[{"detail":null,"due":"2027-02-24","id":"s1","status":"todo","title":"Spring career fair (Feb 24–26)","url":"https://eng.umd.edu/careers/students/fairs"},{"detail":"Lab experience is weighted heavily by Anduril","due":"2027-03-31","id":"s2","status":"todo","title":"Get into a faculty research lab","url":null},{"detail":"Resume around what you built + numbers","due":"2027-04-30","id":"s3","status":"todo","title":"Portfolio page with project photos","url":null},{"detail":"Referrals ~2x interview odds","due":"2027-04-30","id":"s4","status":"todo","title":"UMD alumni at Anduril: informational chats","url":null},{"detail":"'Why defense tech' is an explicit Anduril interview filter","due":"2027-05-31","id":"s5","status":"todo","title":"Write the mission narrative","url":null}]},{"id":"summer27","label":"Summer 2027","tasks":[{"detail":"APL / Rocket Lab / Anduril — real hardware experience unlocks 2028","due":"2027-08-31","id":"t1","status":"todo","title":"Land first internship","url":null}]},{"id":"fall27","label":"Fall 2027","tasks":[{"detail":"Reqs post ~Aug–Sep; rolling review fills seats by winter break","due":"2027-09-15","id":"u1","status":"todo","title":"Apply Anduril Summer 2028 — week one","url":"https://www.anduril.com/open-roles?department=internships"}]}],"last_updated":"2026-10-07","long_term":"Anduril Arsenal-2 shipyard (Sparrows Point, MD) starts hiring 2029 — aligns with graduation","notes":["Anduril interviews: recruiter screen (mission alignment is a real filter) → technical → Super Day. Same-day offers happen.","Anduril screens for: mission conviction, collegiate project-team/lab experience, CAD (SolidWorks/NX), fabrication, first-principles thinking.","No clearance needed to apply — Anduril sponsors post-hire. Must be a U.S. Person (ITAR).","ME interns: ~$30-34/hr, 12 weeks, paid, in-person. Reston VA and Washington DC offices commutable from College Park.","Arsenal-2: $3.7B Anduril + up to $2.9B Navy shipyard at Sparrows Point MD. 3,100 jobs. Hiring starts 2029, operations 2030."],"owner":"Malia (UMD Honors, Aerospace Engineering, first year, 40 AP credits)","target":"Anduril Summer 2028 internship (Summer 2027 as lottery ticket + experience builder)"}
+{
+ "campaign": "Malia \u2192 Anduril internship",
+ "groups": [
+  {
+   "id": "apply",
+   "label": "Applications (do first \u2014 rolling review)",
+   "tasks": [
+    {
+     "detail": "Reston, VA",
+     "due": "2026-10-11",
+     "id": "a1",
+     "status": "todo",
+     "title": "Apply: Anduril Mechanical Engineer Intern 2027",
+     "url": "https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007",
+     "priority": "now"
+    },
+    {
+     "detail": "Aerospace majors eligible",
+     "due": "2026-10-11",
+     "id": "a2",
+     "status": "todo",
+     "title": "Apply: Anduril Flight Software Engineer Intern 2027",
+     "url": "https://boards.greenhouse.io/andurilindustries/jobs/5239083007",
+     "priority": "now"
+    },
+    {
+     "detail": "Composite aerostructures",
+     "due": "2026-10-11",
+     "id": "a3",
+     "status": "todo",
+     "title": "Apply: Anduril Manufacturing Optimization Intern 2027",
+     "url": "https://boards.greenhouse.io/andurilindustries/jobs/5236893007",
+     "priority": "now"
+    },
+    {
+     "detail": "Laurel MD. No class-year minimum, 3.0 GPA, US citizen. Best freshman odds.",
+     "due": "2026-10-18",
+     "id": "a4",
+     "status": "todo",
+     "title": "Apply: JHU APL internship 2027",
+     "url": "https://www.jhuapl.edu/careers/internships",
+     "priority": "now"
+    },
+    {
+     "detail": "Middle River / Silver Spring MD",
+     "due": "2026-10-18",
+     "id": "a5",
+     "status": "todo",
+     "title": "Apply: Rocket Lab Test Engineering Intern 2027",
+     "url": "https://job-boards.greenhouse.io/rocketlab/jobs/8003529003",
+     "priority": "now"
+    },
+    {
+     "detail": "Get on a recruiter's radar",
+     "due": "2026-10-11",
+     "id": "a6",
+     "status": "todo",
+     "title": "Join Anduril Talent Community",
+     "url": "https://www.anduril.com/early-careers",
+     "priority": "now"
+    }
+   ]
+  },
+  {
+   "id": "fairs",
+   "label": "Career fairs",
+   "tasks": [
+    {
+     "detail": "UMD fairs pull from Handshake",
+     "due": "2026-10-07",
+     "id": "f1",
+     "status": "todo",
+     "title": "Resume on Handshake",
+     "url": null,
+     "priority": "now"
+    },
+    {
+     "detail": "1\u20134pm, register on Handshake",
+     "due": "2026-10-08",
+     "id": "f2",
+     "status": "todo",
+     "title": "Oct 8: Virtual Fall Career & Internship Fair",
+     "url": "https://eng.umd.edu/careers/students/fairs",
+     "priority": "now"
+    },
+    {
+     "detail": "2\u20136pm, Kim Engineering Rotunda \u2014 the aerospace one",
+     "due": "2026-10-28",
+     "id": "f3",
+     "status": "todo",
+     "title": "Oct 28: Multi-Industry Engineering Fair",
+     "url": "https://eng.umd.edu/careers/students/fairs",
+     "priority": "now"
+    },
+    {
+     "detail": "40 AP credits may count as sophomore \u2014 changes which postings fit",
+     "due": "2026-10-14",
+     "id": "f4",
+     "status": "todo",
+     "title": "Check official UMD class standing",
+     "url": null,
+     "priority": "now"
+    }
+   ]
+  },
+  {
+   "id": "build",
+   "label": "Build (fall 2026)",
+   "tasks": [
+    {
+     "detail": "Genesis Cup winners \u2014 defense recruiters visit the team directly",
+     "due": "2026-10-31",
+     "id": "b1",
+     "status": "todo",
+     "title": "Join Terrapin Rockets",
+     "url": "https://sites.google.com/terpmail.umd.edu/terprockets/home",
+     "priority": "now"
+    },
+    {
+     "detail": "Directly relevant to Anduril's Ghost/Anvil drones",
+     "due": "2026-10-31",
+     "id": "b2",
+     "status": "todo",
+     "title": "Check out drone teams + AIAA",
+     "url": "https://robotics.umd.edu/opportunities/student-teams",
+     "priority": "later"
+    },
+    {
+     "detail": "CAD is explicitly screened for in Anduril postings",
+     "due": "2026-12-01",
+     "id": "b3",
+     "status": "todo",
+     "title": "Start SolidWorks (free via UMD)",
+     "url": null,
+     "priority": "later"
+    },
+    {
+     "detail": "Plus MATLAB \u2014 Anduril technical screens use both",
+     "due": "2026-12-01",
+     "id": "b4",
+     "status": "todo",
+     "title": "Start Python",
+     "url": null,
+     "priority": "later"
+    }
+   ]
+  },
+  {
+   "id": "spring",
+   "label": "Spring 2027",
+   "tasks": [
+    {
+     "detail": null,
+     "due": "2027-02-24",
+     "id": "s1",
+     "status": "todo",
+     "title": "Spring career fair (Feb 24\u201326)",
+     "url": "https://eng.umd.edu/careers/students/fairs",
+     "priority": "later"
+    },
+    {
+     "detail": "Lab experience is weighted heavily by Anduril",
+     "due": "2027-03-31",
+     "id": "s2",
+     "status": "todo",
+     "title": "Get into a faculty research lab",
+     "url": null,
+     "priority": "later"
+    },
+    {
+     "detail": "Resume around what you built + numbers",
+     "due": "2027-04-30",
+     "id": "s3",
+     "status": "todo",
+     "title": "Portfolio page with project photos",
+     "url": null,
+     "priority": "later"
+    },
+    {
+     "detail": "Referrals ~2x interview odds",
+     "due": "2027-04-30",
+     "id": "s4",
+     "status": "todo",
+     "title": "UMD alumni at Anduril: informational chats",
+     "url": null,
+     "priority": "later"
+    },
+    {
+     "detail": "'Why defense tech' is an explicit Anduril interview filter",
+     "due": "2027-05-31",
+     "id": "s5",
+     "status": "todo",
+     "title": "Write the mission narrative",
+     "url": null,
+     "priority": "later"
+    }
+   ]
+  },
+  {
+   "id": "summer27",
+   "label": "Summer 2027",
+   "tasks": [
+    {
+     "detail": "APL / Rocket Lab / Anduril \u2014 real hardware experience unlocks 2028",
+     "due": "2027-08-31",
+     "id": "t1",
+     "status": "todo",
+     "title": "Land first internship",
+     "url": null,
+     "priority": "later"
+    }
+   ]
+  },
+  {
+   "id": "fall27",
+   "label": "Fall 2027",
+   "tasks": [
+    {
+     "detail": "Reqs post ~Aug\u2013Sep; rolling review fills seats by winter break",
+     "due": "2027-09-15",
+     "id": "u1",
+     "status": "todo",
+     "title": "Apply Anduril Summer 2028 \u2014 week one",
+     "url": "https://www.anduril.com/open-roles?department=internships",
+     "priority": "later"
+    }
+   ]
+  }
+ ],
+ "last_updated": "2026-10-07",
+ "long_term": "Anduril Arsenal-2 shipyard (Sparrows Point, MD) starts hiring 2029 \u2014 aligns with graduation",
+ "notes": [
+  "Anduril interviews: recruiter screen (mission alignment is a real filter) \u2192 technical \u2192 Super Day. Same-day offers happen.",
+  "Anduril screens for: mission conviction, collegiate project-team/lab experience, CAD (SolidWorks/NX), fabrication, first-principles thinking.",
+  "No clearance needed to apply \u2014 Anduril sponsors post-hire. Must be a U.S. Person (ITAR).",
+  "ME interns: ~$30-34/hr, 12 weeks, paid, in-person. Reston VA and Washington DC offices commutable from College Park.",
+  "Arsenal-2: $3.7B Anduril + up to $2.9B Navy shipyard at Sparrows Point MD. 3,100 jobs. Hiring starts 2029, operations 2030."
+ ],
+ "owner": "Malia (UMD Honors, Aerospace Engineering, first year, 40 AP credits)",
+ "target": "Anduril Summer 2028 internship (Summer 2027 as lottery ticket + experience builder)"
+}
