@@ -24,7 +24,7 @@ section{padding:26px 0}
 h2{font-size:1.3rem;margin-bottom:4px}
 .sub{color:var(--mut);font-size:.88rem;margin-bottom:16px}
 /* priority list */
-.pri{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px;margin-bottom:10px;align-items:flex-start}
+.pri{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px;margin-bottom:10px;align-items:flex-start;cursor:pointer}
 .pri.done{opacity:.5}
 .pri.done .p-title{text-decoration:line-through}
 .num{flex:0 0 30px;height:30px;border-radius:50%;background:var(--acc);color:#101114;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
@@ -183,14 +183,16 @@ NOW.forEach(([id,title,date,desc,url,label],i) => {
   el.querySelector(".p-date").textContent = "📅 " + date;
   el.querySelector(".p-title").textContent = title;
   el.querySelector(".p-desc").textContent = desc;
-  el.querySelector(".p-check").onclick = (e) => {
-    e.stopPropagation();
+  const toggle = () => {
     done[id] = !done[id];
     try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e2) {}
     el.classList.toggle("done", !!done[id]);
     el.querySelector(".num").textContent = done[id] ? "✓" : (i+1);
     el.querySelector(".p-check").textContent = done[id] ? "✓" : "";
   };
+  el.onclick = toggle;
+  const link = el.querySelector(".p-link");
+  if (link) link.onclick = (e) => e.stopPropagation();
   host.appendChild(el);
 });
 document.getElementById("laterHead").onclick = () =>
