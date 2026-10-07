@@ -100,6 +100,15 @@
      "title": "Check official UMD class standing",
      "url": null,
      "priority": "now"
+    },
+    {
+     "detail": "Defense contractor info session, 6pm \u2014 directly relevant to the Anduril path",
+     "due": "2026-10-19",
+     "id": "f5",
+     "priority": "now",
+     "status": "todo",
+     "title": "Thales Defense & Security info session",
+     "url": "https://me.umd.edu/events/career-fair"
     }
    ]
   },
