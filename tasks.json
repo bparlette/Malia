@@ -42,6 +42,24 @@
      "priority": "now"
     },
     {
+     "detail": "Baltimore MD. 10 weeks, $20.50-$37.25/hr. US citizen, clearance-eligible. URGENT: posted Sep 23, rolling review.",
+     "due": "2026-10-11",
+     "id": "a7",
+     "status": "todo",
+     "title": "Apply: Northrop Grumman Mechanical Engineer Intern 2027",
+     "url": "https://www.northropgrumman.com/careers/internships-at-northrop-grumman/",
+     "priority": "now"
+    },
+    {
+     "detail": "Herndon/Chantilly VA. Aero + mech majors accepted. $22.93-$40.14/hr. Req R186304.",
+     "due": "2026-10-18",
+     "id": "a8",
+     "status": "todo",
+     "title": "Apply: Parsons Engineering Internship Summer 2027",
+     "url": "https://jobs.parsons.com/career-search?job-main-category=internship-program",
+     "priority": "now"
+    },
+    {
      "detail": "Get on a recruiter's radar",
      "due": "2026-10-11",
      "id": "a6",
@@ -49,6 +67,30 @@
      "title": "Join Anduril Talent Community",
      "url": "https://www.anduril.com/early-careers",
      "priority": "now"
+    }
+   ]
+  },
+  {
+   "id": "watch",
+   "label": "Watch list (no postings yet)",
+   "tasks": [
+    {
+     "detail": "St. Mary's County MD. Hired a Summer 2026 software intern; check back in fall for 2027 roles.",
+     "due": null,
+     "id": "w1",
+     "status": "todo",
+     "title": "Watch: Platform Aerospace internships",
+     "url": "https://platformaerospace.com/careers",
+     "priority": "later"
+    },
+    {
+     "detail": "Arlington VA + new $500M VA rocket-motor plant (1,500 jobs). No internship program yet — monitor as they build out.",
+     "due": null,
+     "id": "w2",
+     "status": "todo",
+     "title": "Watch: Avio USA",
+     "url": "https://www.avio.com/careers",
+     "priority": "later"
     }
    ]
   },
@@ -227,7 +269,7 @@
    ]
   }
  ],
- "last_updated": "2026-10-07",
+ "last_updated": "2026-10-08",
  "long_term": "Anduril Arsenal-2 shipyard (Sparrows Point, MD) starts hiring 2029 \u2014 aligns with graduation",
  "notes": [
   "Anduril interviews: recruiter screen (mission alignment is a real filter) \u2192 technical \u2192 Super Day. Same-day offers happen.",
